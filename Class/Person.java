@@ -1,5 +1,3 @@
-
-
 public abstract class Person {
      /** First name of individual*/
      private String firstName;

@@ -1,37 +1,15 @@
-import java.util.List;
 
+public class Customer extends Person{
+    private int customerID;
 
-final class Customer extends Person{
-    
-    public static List<Account>accounts;
-    private String customerID;
-
-    public static List<Account> getAccounts() {
-        return accounts;
+    Customer(String [] customerInfo){
+        this.customerID = Integer.parseInt(customerInfo [0]);
+        this.setFirstName(customerInfo[1]);
+        this.setLastName(customerInfo[2]);
+        this.setDob(customerInfo [3]);
+        this.setAddress(customerInfo [4]);
+        this.setPhoneNum(customerInfo [5]);
     }
-
-    public static void setAccounts(List<Account> accounts) {
-        Customer.accounts = accounts;
-    }
-    
-    /**
-     * 
-     * @param costumerID Costumer identification number.
-     */
-    public Customer(String customerID){
-        getID();
-    }
-    /**
-     * 
-     * @param customerID Costumer identification number.
-     */
-    public void setID(String customerID){
-        this.customerID = customerID;
-    }
-    public String getID(){
-        return customerID;
-    }
-        
     
 }
 
